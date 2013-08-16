@@ -102,7 +102,7 @@ https://www.dropmyemail.com/oauth/token
 - client_id: Your app's uid
 - client_secret: Your app's secret
 - code: The authorization code
-- grant_type: authorization_code
+- grant\_type: authorization_code
 - redirect_uri: http://example.com/callback
 
 The redirect uri has to match the URL registered in your app. The response will be similar to below.
