@@ -116,4 +116,16 @@ The redirect uri has to match the URL registered in your app. The response will 
 }
 ```
 
-Your access token is now created. Save the access token so that you will be able to make API calls. Visit the documentation to find out how to make API calls.
+Your access token is now created. Save the access token so that you will be able to make API calls.
+
+### Making API calls
+
+When making calls, include the parameter __access_token__ in order to authenticate. An example of a __GET__ request looks like this
+
+```
+https://api.dropmyemail.com/v1/accounts?access_token=abcdefg
+```
+
+All requests should be directed to __https://api.dropmyemail.com__.
+
+Visit the documentation to find out how to make API calls.
