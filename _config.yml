@@ -1,4 +1,6 @@
-name: Your New Jekyll Site
+name: Dropmyemail API
 pygments: true
 exclude: [Gemfile, Gemfile.lock, .ruby-version, .gitignore, Rakefile]
+include: [favicon.ico]
 permalink: pretty
+markdown: redcarpet

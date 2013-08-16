@@ -28,6 +28,7 @@ GEM
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
     rake (10.1.0)
+    redcarpet (3.0.0)
     safe_yaml (0.7.1)
     syntax (1.0.0)
     yajl-ruby (1.1.0)
@@ -38,3 +39,4 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   rake
+  redcarpet

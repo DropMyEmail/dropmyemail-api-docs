@@ -1,13 +1,15 @@
-1---
-layout: post
+---
+layout: default
 title:  "Accounts"
 date:   2013-07-26 11:00:30
-categories:
+categories: accounts
 ---
 
-Accounts API allow you to manipulate email accounts for backing up.
+## Backup API
 
-## List
+Backup API allow you to manipulate email accounts for backing up.
+
+## <a id="list"></a> List
 
 List the email accounts for the user.
 
@@ -19,28 +21,28 @@ GET /v1/accounts
 
 #### type
 
- - all
- - imap
- - pop
+- all
+- imap
+- pop
 
 default: all
 
 #### sort
 
- - email
- - message_count
- - storage
- - created_at
- - updated_at
+- email
+- message_count
+- storage
+- created_at
+- updated_at
 
 default: email
 
 ##### direction
 
- - asc
- - desc
+- asc
+- desc
 
- default: asc
+default: asc
 
 ### Scope
 read
@@ -60,8 +62,7 @@ read
     "created_at": "2013-06-24T23:55:43.000Z",
     "updated_at": "2013-06-26T20:16:40.000Z",
     "email": "demo1@mail.com"
-},
-{
+}, {
     "id": 889,
     "host": "pop.mail.com",
     "protocol": "pop",
@@ -73,11 +74,10 @@ read
     "created_at": "2013-06-24T23:55:43.000Z",
     "updated_at": "2013-06-26T20:16:40.000Z",
     "email": "demo2@mail.com"
-}
-]
+}]
 ```
 
-## Get a single account
+## <a id"show"></a> Get a single account
 
 Get an email account for the user.
 
@@ -89,6 +89,7 @@ GET /v1/accounts/:id
 read
 
 ### Response
+
 ``` javascript
 {
     "id": 888,
@@ -105,7 +106,7 @@ read
 }
 ```
 
-## Add an email account
+## <a id="create"></a> Add an email account
 
 Add an email account for backing up.
 
@@ -170,18 +171,43 @@ write
 
 ### Response
 
+``` javascript
+{
+    "id": 888,
+    "host": "pop.mail.com",
+    "protocol": "pop",
+    "start_tls": true,
+    "ssl": false,
+    "port": 110,
+    "msg_count": 1000,
+    "storage": 200,
+    "created_at": "2013-06-24T23:55:43.000Z",
+    "updated_at": "2013-06-26T20:16:40.000Z",
+    "email": "demo@mail.com"
+}
+```
+
 #### Special case for Gmail/Google Apps account
+
+_Note: This part is not completed yet. But documented for your reference_
 
 If the email account is a Gmail or Google Apps account, we need the user to grant us permission to access his account. It is done through Oauth.
 
 We will return you an authorization url. First, the user has to be logged in to the same Gmail/Google Apps account. Then the user should be redirected to the authorization url and grant us the permission.
 
-## Delete a single account
+## <a id="update"></a> Update a single account
 
-Delete an email account for the user.
+Update an email account for the user. Updates are allowed for the following fields.
+
+- password
+- host
+- protocol
+- start_tls
+- ssl
+- port
 
 ```
-DELETE /v1/accounts/:id
+PUT /v1/accounts/:id
 ```
 
 ### Scope
@@ -204,19 +230,12 @@ write
 }
 ```
 
-## Update a single account
+## <a id="delete"></a> Delete a single account
 
-Update an email account for the user. Updates are allowed for the following fields.
-
-- password
-- host
-- protocol
-- start_tls
-- ssl
-- port
+Delete an email account for the user.
 
 ```
-PUT /v1/accounts/:id
+DELETE /v1/accounts/:id
 ```
 
 ### Scope
