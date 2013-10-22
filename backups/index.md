@@ -7,7 +7,7 @@ categories: accounts
 
 ## Backup API
 
-Backup API allow you to manipulate email accounts for backing up.
+Backup API allows you to manipulate email accounts for backing up.
 
 ## <a id="list"></a> List
 

@@ -7,7 +7,7 @@ title: "Dropmyemail API"
 
 Welcome to Dropmyemail API! This site describes __version 1__ of Dropmyemail API. You will be shown how to create an app using Dropmyemail API. If you should have any problems, please contact [support](mailto:support@dropmyemail.com).
 
-### Current Version: 1.0.0-alpha
+### Current Version: 1.1.0
 
 ### What the API can do
 
@@ -22,7 +22,7 @@ And much more. Do visit the detailed documentation for a better picture on what 
 
 ### Things to Note
 
-Currently the API is partial complete. We also do not support backup for Gmail/Google apps email accounts at the moment. We will definitely add support for Gmail/Google email accounts very soon. Do check back often for updates.
+Currently the API is partial complete. We also do not support backup and migrate for Gmail/Google apps email accounts at the moment. We will definitely add support for Gmail/Google email accounts very soon. Do check back often for updates.
 
 #### JSON endpoints
 

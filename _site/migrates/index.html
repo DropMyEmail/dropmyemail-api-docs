@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Accounts</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="/css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/css/apidoc.css">
+    <link rel="stylesheet" type="text/css" href="/css/apidoc-responsive.css">
+
+  </head>
+  <body>
+
+    <div id="wrap">
+      <!--header-->
+      <div class="navbar navbar-inverse navbar-fixed-top">
+    	<div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="/">
+	      <img src="/images/chrome/dropmyemail_logo.png">
+	    </a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+              	<li><a href="/changes">Changes</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--body-->
+      <div class="container top-margin-fix">
+
+	<div class="container-dashboard clearfix">
+	  <h2 class="title-main">Developer API Documentation</h2>
+          <div class="row">
+            <div class="span3">
+              <div class="n-panel">
+                <!--accordian-->
+                <div class="accordion" id="nav-accordion">
+
+                  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse1">
+                        Backup
+                      </a>
+                    </div>
+                    <div id="collapse1" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/backups">Intro</a></li>
+                          <li><a href="/backups#list">List all accounts</a></li>
+                          <li><a href="/backups#show">Get a single account</a></li>
+                          <li><a href="/backups#create">Add an email account</a></li>
+                          <li><a href="/backups#update">Update an email account</a></li>
+                          <li><a href="/backups#delete">Delete an email account</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse2">
+                        Migrate
+                      </a>
+                    </div>
+                    <div id="collapse2" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/migrates">Intro</a></li>
+                          <li><a href="/migrates#list">List all migrates</a></li>
+                          <li><a href="/migrates#create">Start a migrate</a></li>
+                          <li><a href="/migrates#show">Get a single migrate</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse3">
+                        Restore
+                      </a>
+                    </div>
+                    <div id="collapse3" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="#">Coming!</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- /accordian-->
+              </div>
+            </div>
+            <div class="span9">
+	      <div class="c-panel">
+		<h2>Migrate API</h2>
+
+<p>Migrate API allows you to manipulate email accounts for migrations. A migration means moving the emails from one account to another.</p>
+
+<h2><a id="list"></a> List</h2>
+
+<p>List the migrates for the account.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">GET /v1/accounts/:account_id/migrates
+</code></pre></div>
+<h3>Parameters</h3>
+
+<h4>sort</h4>
+
+<ul>
+<li>start_time</li>
+<li>end_time</li>
+</ul>
+
+<p>default: start_time</p>
+
+<h5>direction</h5>
+
+<ul>
+<li>asc</li>
+<li>desc</li>
+</ul>
+
+<p>default: asc</p>
+
+<h3>Scope</h3>
+
+<p>read</p>
+
+<h3>Response</h3>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">53</span><span class="p">,</span>
+        <span class="s2">&quot;account_id&quot;</span><span class="o">:</span> <span class="mi">100272</span><span class="p">,</span>
+        <span class="s2">&quot;host&quot;</span><span class="o">:</span> <span class="s2">&quot;imap.googlemail.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;protocol&quot;</span><span class="o">:</span> <span class="s2">&quot;imap&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;start_tls&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;port&quot;</span><span class="o">:</span> <span class="mi">993</span><span class="p">,</span>
+        <span class="s2">&quot;ssl&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">&quot;downloaded&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;messages&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;start_time&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-10-16T00:36:01.000Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end_time&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-10-16T01:36:01.000Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-10-16T00:32:40.000Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;google_oauth_token&quot;</span><span class="o">:</span> <span class="s2">&quot;some-token&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;backup_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;google_oauth_token_secret&quot;</span><span class="o">:</span> <span class="s2">&quot;massive-secret&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;message_ids&quot;</span><span class="o">:</span> <span class="s2">&quot;[72915,110091,110314,109815,110353,85899,54637,108237,69084,70322]&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;demo@dropmyemail.com&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<h2><a id"show"></a> Get a single migrate</h2>
+
+<p>Get a migrate from the account.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">GET /v1/accounts/:account_id/migrates/:id
+</code></pre></div>
+<h3>Scope</h3>
+
+<p>read</p>
+
+<h3>Response</h3>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">53</span><span class="p">,</span>
+    <span class="s2">&quot;account_id&quot;</span><span class="o">:</span> <span class="mi">100272</span><span class="p">,</span>
+    <span class="s2">&quot;host&quot;</span><span class="o">:</span> <span class="s2">&quot;imap.googlemail.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;protocol&quot;</span><span class="o">:</span> <span class="s2">&quot;imap&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;start_tls&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">&quot;ssl&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;port&quot;</span><span class="o">:</span> <span class="mi">993</span><span class="p">,</span>
+    <span class="s2">&quot;downloaded&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;messages&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;start_time&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-10-16T00:36:01.000Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;end_time&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-10-16T01:36:01.000Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;google_oauth_token&quot;</span><span class="o">:</span> <span class="s2">&quot;some-token&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;google_oauth_token_secret&quot;</span><span class="o">:</span> <span class="s2">&quot;massive-secret&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;backup_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;message_ids&quot;</span><span class="o">:</span> <span class="s2">&quot;[72915,110091,110314,109815,110353,85899,54637,108237,69084,70322]&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-10-16T00:32:40.000Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;demo@dropmyemail.com&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2><a id="create"></a> Add a migrate</h2>
+
+<p>Start an migration for the account</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">POST /v1/accounts/:account_id/migrates
+</code></pre></div>
+<h3>Input parameters</h3>
+
+<h4>email</h4>
+
+<ul>
+<li>required</li>
+<li>string</li>
+</ul>
+
+<p>The email account for backing up.</p>
+
+<h4>password</h4>
+
+<ul>
+<li>required</li>
+<li>string</li>
+</ul>
+
+<p>The password to the email account</p>
+
+<h4>host</h4>
+
+<ul>
+<li>optional</li>
+<li>string</li>
+<li>hostname for the server</li>
+</ul>
+
+<p>Eg: &#39;imap.mailserver.com&#39;</p>
+
+<h4>protocol</h4>
+
+<ul>
+<li>optional</li>
+<li>string</li>
+<li>use either &#39;imap&#39; or &#39;pop&#39;.</li>
+</ul>
+
+<p>This is the supported protocol of the mail server.</p>
+
+<p>Eg: &#39;imap&#39;</p>
+
+<h4>start_tls</h4>
+
+<ul>
+<li>optional</li>
+<li>boolean</li>
+<li>default: false</li>
+</ul>
+
+<p><a href="http://en.wikipedia.org/wiki/STARTTLS">Start TLS</a> is a configuration setting of the mail server. Check if it is supported by the mail server.</p>
+
+<p>Eg: true</p>
+
+<h4>ssl</h4>
+
+<ul>
+<li>optional</li>
+<li>boolean</li>
+<li>default: false</li>
+</ul>
+
+<p><a href="http://en.wikipedia.org/wiki/Email_encryption">SSL</a> is a configuration setting of the mail server. Check if it is supported by the mail server.</p>
+
+<h4>port</h4>
+
+<ul>
+<li>optional</li>
+<li>integer</li>
+</ul>
+
+<p>This is the port number that the mail server is listening to. Usually it is a <a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers">well known port number</a>.</p>
+
+<h3>Scope</h3>
+
+<p>write</p>
+
+<h3>Response</h3>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">63</span><span class="p">,</span>
+    <span class="s2">&quot;account_id&quot;</span><span class="o">:</span> <span class="s2">&quot;100272&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;host&quot;</span><span class="o">:</span> <span class="s2">&quot;imap.mail.yahoo.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;protocol&quot;</span><span class="o">:</span> <span class="s2">&quot;imap&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;start_tls&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">&quot;ssl&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;port&quot;</span><span class="o">:</span> <span class="s2">&quot;993&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-10-18T03:47:59.765Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;dropmyemail@yahoo.com&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4>Special case for Gmail/Google Apps account</h4>
+
+<p><em>Note: This part is not completed yet. But documented for your reference</em></p>
+
+<p>If the email account is a Gmail or Google Apps account, we need the user to grant us permission to access his account. It is done through Oauth.</p>
+
+<p>We will return you an authorization url. First, the user has to be logged in to the same Gmail/Google Apps account. Then the user should be redirected to the authorization url and grant us the permission.</p>
+
+	      </div>
+            </div>
+          </div>
+	</div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+    	<div class="container-general">
+          <ul class="footer-menu clearfix">
+            <li><a href="http://www.dropmyemail.com/about_us">About</a></li>
+            <li><a href="mailto:support@dropmyemail.com">Support</a></li>
+            <li><a href="http://engineering.dropmyemail.com">Blog</a></li>
+          </ul>
+          <hr>
+          <div class="footer-copyright">Copyright 2013 Dropmysite Pte Ltd.  All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
