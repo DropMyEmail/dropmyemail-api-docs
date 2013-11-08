@@ -18,3 +18,10 @@ Added API for accounts
  - list
  - show
  - create
+
+## 1.2.0 (Nov 8)
+
+ Added API for account restores
+ - list
+ - show
+ - create

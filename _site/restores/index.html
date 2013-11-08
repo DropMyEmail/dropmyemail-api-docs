@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Changes</title>
+    <title>Accounts</title>
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico" type="image/png">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
@@ -110,29 +110,103 @@
             </div>
             <div class="span9">
 	      <div class="c-panel">
-		<h2>1.0.0-alpha (Aug 16)</h2>
+		<h2>Restore API</h2>
 
-<p>Added API for accounts
- - list
- - show
- - create
- - update
- - delete</p>
+<p>Restore API allows you to manipulate email accounts for restores. A restore means moving the emails from the backups to the same account.</p>
 
-<h2>1.1.0 (Oct 22)</h2>
+<h2><a id="list"></a> List</h2>
 
-<p>Added API for account migrates
- - list
- - show
- - create</p>
+<p>List the restores for the account.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">GET /v1/accounts/:account_id/restores
+</code></pre></div>
+<h3>Parameters</h3>
 
-<h2>1.2.0 (Nov 8)</h2>
+<h4>sort</h4>
 
-<p>Added API for account restores
- - list
- - show
- - create</p>
+<ul>
+<li>start_time</li>
+<li>end_time</li>
+</ul>
 
+<p>default: start_time</p>
+
+<h5>direction</h5>
+
+<ul>
+<li>asc</li>
+<li>desc</li>
+</ul>
+
+<p>default: asc</p>
+
+<h3>Scope</h3>
+
+<p>read</p>
+
+<h3>Response</h3>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">153</span><span class="p">,</span>
+        <span class="s2">&quot;account_id&quot;</span><span class="o">:</span> <span class="mi">100272</span><span class="p">,</span>
+        <span class="s2">&quot;downloaded&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;messages&quot;</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;start_time&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-07-10T22:20:10.000Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;end_time&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-07-10T22:21:21.000Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-07-10T22:19:40.000Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;backup_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="s2">&quot;message_ids&quot;</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<h2><a id"show"></a> Get a single restore</h2>
+
+<p>Get a restore from the account.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">GET /v1/accounts/:account_id/restores/:id
+</code></pre></div>
+<h3>Scope</h3>
+
+<p>read</p>
+
+<h3>Response</h3>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">153</span><span class="p">,</span>
+    <span class="s2">&quot;account_id&quot;</span><span class="o">:</span> <span class="mi">100272</span><span class="p">,</span>
+    <span class="s2">&quot;downloaded&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;messages&quot;</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+    <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;start_time&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-07-10T22:20:10.000Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;end_time&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-07-10T22:21:21.000Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;backup_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;message_ids&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-07-10T22:19:40.000Z&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2><a id="create"></a> Add a restore</h2>
+
+<p>Start an restore for the account</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">POST /v1/accounts/:account_id/restores
+</code></pre></div>
+<h3>Input parameters</h3>
+
+<p>None needed</p>
+
+<h3>Scope</h3>
+
+<p>write</p>
+
+<h3>Response</h3>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="p">{</span>
+    <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">347563</span><span class="p">,</span>
+    <span class="s2">&quot;account_id&quot;</span><span class="o">:</span> <span class="s2">&quot;100272&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;downloaded&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">&quot;restore_size&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;messages&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;attempts&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-11-08T07:05:17.300Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">156</span>
+<span class="p">}</span>
+</code></pre></div>
 	      </div>
             </div>
           </div>
