@@ -25,3 +25,13 @@ Added API for accounts
  - list
  - show
  - create
+
+## 1.3.0 (Nov 25)
+
+Added API for mailboxes
+- list
+
+Added API for messages
+- list
+- show
+- search
