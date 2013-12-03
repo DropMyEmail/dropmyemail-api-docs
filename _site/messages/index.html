@@ -176,15 +176,19 @@ default: 20</p>
 <p>email</p>
 
 <h3>Response</h3>
-<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="p">[</span>
-    <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">675</span><span class="p">,</span>
-        <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">347563</span><span class="p">,</span>
-        <span class="s2">&quot;account_id&quot;</span><span class="o">:</span> <span class="mi">100272</span><span class="p">,</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;INBOX&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;message_count&quot;</span><span class="o">:</span> <span class="mi">4</span>
-    <span class="p">}</span>
-<span class="p">]</span>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="p">{</span>
+  <span class="nx">count</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nx">start</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nx">mailboxes</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">675</span><span class="p">,</span>
+          <span class="s2">&quot;user_id&quot;</span><span class="o">:</span> <span class="mi">347563</span><span class="p">,</span>
+          <span class="s2">&quot;account_id&quot;</span><span class="o">:</span> <span class="mi">100272</span><span class="p">,</span>
+          <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;INBOX&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;message_count&quot;</span><span class="o">:</span> <span class="mi">4</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div>
 <h2><a id="list_messages"></a> List Messages</h2>
 

@@ -53,15 +53,19 @@ email
 ### Response
 
 ``` javascript
-[
-    {
-        "id": 675,
-        "user_id": 347563,
-        "account_id": 100272,
-        "name": "INBOX",
-        "message_count": 4
-    }
-]
+{
+  count: 1,
+  start: 0,
+  mailboxes: [
+      {
+          "id": 675,
+          "user_id": 347563,
+          "account_id": 100272,
+          "name": "INBOX",
+          "message_count": 4
+      }
+  ]
+}
 ```
 
 ## <a id="list_messages"></a> List Messages

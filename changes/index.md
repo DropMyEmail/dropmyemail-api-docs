@@ -35,3 +35,7 @@ Added API for messages
 - list
 - show
 - search
+
+## 1.3.1 (Dec 3)
+
+Added count and start for the mailboxes list
