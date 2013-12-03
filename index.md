@@ -7,7 +7,7 @@ title: "Dropmyemail API"
 
 Welcome to Dropmyemail API! This site describes __version 1__ of Dropmyemail API. You will be shown how to create an app using Dropmyemail API. If you should have any problems, please contact [support](mailto:support@dropmyemail.com).
 
-### Current Version: 1.3.1
+### Current Version: 1.3.2
 
 ### What the API can do
 

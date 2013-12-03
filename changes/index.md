@@ -39,3 +39,7 @@ Added API for messages
 ## 1.3.1 (Dec 3)
 
 Added count and start for the mailboxes list
+
+## 1.3.2 (Dec 3)
+
+Added count and start for the messages list

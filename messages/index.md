@@ -118,48 +118,52 @@ email
 ### Response
 
 ``` javascript
-[
-    {
-        "id": 110328,
-        "mailbox_id": 675,
-        "from": "\"The Foo Team\" <support@foomail.com>",
-        "to": null,
-        "subject": "FooMail renewal reminder for dropmyemail@foomail.com,
-        "has_attachments": false,
-        "date": "2013-09-04T19:22:25.000Z",
-        "size": 2421
-    },
-    {
-        "id": 110212,
-        "mailbox_id": 675,
-        "from": "\"The FooMail Team\" <support@foomail.fm>",
-        "to": null,
-        "subject": "Info - Renewal for user dropmyemail@foomail.fm",
-        "has_attachments": false,
-        "date": "2013-08-19T19:42:25.000Z",
-        "size": 2713
-    },
-    {
-        "id": 109413,
-        "mailbox_id": 675,
-        "from": "\Zan\" <zan@dme.com>",
-        "to": null,
-        "subject": "test emails",
-        "has_attachments": false,
-        "date": "2013-07-21T18:01:06.000Z",
-        "size": 2136
-    },
-    {
-        "id": 109414,
-        "mailbox_id": 675,
-        "from": "\"FooMail.FM Administrator\" <webmaster@foomail.fm>",
-        "to": null,
-        "subject": "IMPORTANT: Click here to begin using your account",
-        "has_attachments": true,
-        "date": "2013-07-21T17:59:48.000Z",
-        "size": 13736
-    }
-]
+{
+  count: 4,
+  start: 0,
+  messages: [
+      {
+          "id": 110328,
+          "mailbox_id": 675,
+          "from": "\"The Foo Team\" <support@foomail.com>",
+          "to": null,
+          "subject": "FooMail renewal reminder for dropmyemail@foomail.com,
+          "has_attachments": false,
+          "date": "2013-09-04T19:22:25.000Z",
+          "size": 2421
+      },
+      {
+          "id": 110212,
+          "mailbox_id": 675,
+          "from": "\"The FooMail Team\" <support@foomail.fm>",
+          "to": null,
+          "subject": "Info - Renewal for user dropmyemail@foomail.fm",
+          "has_attachments": false,
+          "date": "2013-08-19T19:42:25.000Z",
+          "size": 2713
+      },
+      {
+          "id": 109413,
+          "mailbox_id": 675,
+          "from": "\Zan\" <zan@dme.com>",
+          "to": null,
+          "subject": "test emails",
+          "has_attachments": false,
+          "date": "2013-07-21T18:01:06.000Z",
+          "size": 2136
+      },
+      {
+          "id": 109414,
+          "mailbox_id": 675,
+          "from": "\"FooMail.FM Administrator\" <webmaster@foomail.fm>",
+          "to": null,
+          "subject": "IMPORTANT: Click here to begin using your account",
+          "has_attachments": true,
+          "date": "2013-07-21T17:59:48.000Z",
+          "size": 13736
+      }
+  ]
+}
 ```
 
 ## <a id"show"></a> Get a single message
