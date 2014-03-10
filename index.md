@@ -7,7 +7,7 @@ title: "Dropmyemail API"
 
 Welcome to Dropmyemail API! This site describes __version 1__ of Dropmyemail API. You will be shown how to create an app using Dropmyemail API. If you should have any problems, please contact [support](mailto:support@dropmyemail.com).
 
-### Current Version: 1.3.2
+### Current Version: 1.4.0
 
 ### What the API can do
 
@@ -18,6 +18,7 @@ You will be able to do the following:
 - Migrate email accounts
 - Restore email accounts
 - Retrieve the email messages
+- Retrieve the contacts
 
 And much more. Do visit the detailed documentation for a better picture on what the API can do.
 
@@ -77,6 +78,8 @@ Currently, we offer the following scopes:
 
 - read
 - write
+- email
+- contact
 
 Scopes determine which API call your app can make. Replace __scopes__ with the scopes your app needs. Multiple scopes can be added together by using __+__ as a separator.
 
