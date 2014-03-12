@@ -47,3 +47,7 @@ Added count and start for the messages list
 ## 1.4.0 (Mar 10 2014)
 
 Added contacts
+
+## 1.5.0 (Mar 11 2014)
+
+Added attachments
