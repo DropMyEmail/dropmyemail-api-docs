@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Changes</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="/css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/css/apidoc.css">
+    <link rel="stylesheet" type="text/css" href="/css/apidoc-responsive.css">
+
+  </head>
+  <body>
+
+    <div id="wrap">
+      <!--header-->
+      <div class="navbar navbar-inverse navbar-fixed-top">
+    	<div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="/">
+	      <img src="/images/chrome/dropmyemail_logo.png">
+	    </a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+              	<li><a href="/changes">Changes</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--body-->
+      <div class="container top-margin-fix">
+
+	<div class="container-dashboard clearfix">
+	  <h2 class="title-main">Developer API Documentation</h2>
+          <div class="row">
+            <div class="span3">
+              <div class="n-panel">
+                <!--accordian-->
+                <div class="accordion" id="nav-accordion">
+
+                  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse1">
+                        Backup
+                      </a>
+                    </div>
+                    <div id="collapse1" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/backups">Intro</a></li>
+                          <li><a href="/backups#list">List all accounts</a></li>
+                          <li><a href="/backups#show">Get a single account</a></li>
+                          <li><a href="/backups#create">Add an email account</a></li>
+                          <li><a href="/backups#update">Update an email account</a></li>
+                          <li><a href="/backups#delete">Delete an email account</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse2">
+                        Migrate
+                      </a>
+                    </div>
+                    <div id="collapse2" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/migrates">Intro</a></li>
+                          <li><a href="/migrates#list">List all migrates</a></li>
+                          <li><a href="/migrates#create">Start a migrate</a></li>
+                          <li><a href="/migrates#show">Get a single migrate</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse3">
+                        Restore
+                      </a>
+                    </div>
+                    <div id="collapse3" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/restores">Intro</a></li>
+                          <li><a href="/restores#list">List all restores</a></li>
+                          <li><a href="/restores#create">Start a restore</a></li>
+                          <li><a href="/restores#show">Get a single restore</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+		  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse4">
+                        Messages
+                      </a>
+                    </div>
+                    <div id="collapse4" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/messages">Intro</a></li>
+                          <li><a href="/messages#list_mailboxes">List all mailboxes</a></li>
+                          <li><a href="/messages#list_messages">List all messages</a></li>
+                          <li><a href="/messages#show">Return an email message</a></li>
+                          <li><a href="/messages#search">Search for terms in the emails</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+		  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse5">
+                        Contacts
+                      </a>
+                    </div>
+                    <div id="collapse5" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/contacts">Intro</a></li>
+                          <li><a href="/contacts#list_contacts">List all contacts of an account</a></li>
+                          <li><a href="/contacts#show">Return a contact</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+		  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse6">
+                        Messages
+                      </a>
+                    </div>
+                    <div id="collapse6" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/attachments">Intro</a></li>
+                          <li><a href="/attachments#list_attachments">List all attachments</a></li>
+                          <li><a href="/attachments#show">Return an attachment</a></li>
+                          <li><a href="/attachments#search">Search for attachments</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- /accordian-->
+              </div>
+            </div>
+            <div class="span9">
+	      <div class="c-panel">
+		<h2>1.0.0-alpha (Aug 16 2013)</h2>
+
+<p>Added API for accounts
+ - list
+ - show
+ - create
+ - update
+ - delete</p>
+
+<h2>1.1.0 (Oct 22 2013)</h2>
+
+<p>Added API for account migrates
+ - list
+ - show
+ - create</p>
+
+<h2>1.2.0 (Nov 8 2013)</h2>
+
+<p>Added API for account restores
+ - list
+ - show
+ - create</p>
+
+<h2>1.3.0 (Nov 25 2013)</h2>
+
+<p>Added API for mailboxes
+- list</p>
+
+<p>Added API for messages
+- list
+- show
+- search</p>
+
+<h2>1.3.1 (Dec 3 2013)</h2>
+
+<p>Added count and start for the mailboxes list</p>
+
+<h2>1.3.2 (Dec 3 2013)</h2>
+
+<p>Added count and start for the messages list</p>
+
+<h2>1.4.0 (Mar 10 2014)</h2>
+
+<p>Added contacts</p>
+
+<h2>1.5.0 (Mar 11 2014)</h2>
+
+<p>Added attachments</p>
+
+	      </div>
+            </div>
+          </div>
+	</div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+    	<div class="container-general">
+          <ul class="footer-menu clearfix">
+            <li><a href="http://www.dropmyemail.com/about_us">About</a></li>
+            <li><a href="mailto:support@dropmyemail.com">Support</a></li>
+            <li><a href="http://engineering.dropmyemail.com">Blog</a></li>
+          </ul>
+          <hr>
+          <div class="footer-copyright">Copyright 2013-2014 Dropmysite Pte Ltd.  All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

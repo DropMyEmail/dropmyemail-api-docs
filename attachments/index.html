@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Attachments</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="/css/syntax.css">
+    <link rel="stylesheet" type="text/css" href="/css/apidoc.css">
+    <link rel="stylesheet" type="text/css" href="/css/apidoc-responsive.css">
+
+  </head>
+  <body>
+
+    <div id="wrap">
+      <!--header-->
+      <div class="navbar navbar-inverse navbar-fixed-top">
+    	<div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="/">
+	      <img src="/images/chrome/dropmyemail_logo.png">
+	    </a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+              	<li><a href="/changes">Changes</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--body-->
+      <div class="container top-margin-fix">
+
+	<div class="container-dashboard clearfix">
+	  <h2 class="title-main">Developer API Documentation</h2>
+          <div class="row">
+            <div class="span3">
+              <div class="n-panel">
+                <!--accordian-->
+                <div class="accordion" id="nav-accordion">
+
+                  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse1">
+                        Backup
+                      </a>
+                    </div>
+                    <div id="collapse1" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/backups">Intro</a></li>
+                          <li><a href="/backups#list">List all accounts</a></li>
+                          <li><a href="/backups#show">Get a single account</a></li>
+                          <li><a href="/backups#create">Add an email account</a></li>
+                          <li><a href="/backups#update">Update an email account</a></li>
+                          <li><a href="/backups#delete">Delete an email account</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse2">
+                        Migrate
+                      </a>
+                    </div>
+                    <div id="collapse2" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/migrates">Intro</a></li>
+                          <li><a href="/migrates#list">List all migrates</a></li>
+                          <li><a href="/migrates#create">Start a migrate</a></li>
+                          <li><a href="/migrates#show">Get a single migrate</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse3">
+                        Restore
+                      </a>
+                    </div>
+                    <div id="collapse3" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/restores">Intro</a></li>
+                          <li><a href="/restores#list">List all restores</a></li>
+                          <li><a href="/restores#create">Start a restore</a></li>
+                          <li><a href="/restores#show">Get a single restore</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+		  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse4">
+                        Messages
+                      </a>
+                    </div>
+                    <div id="collapse4" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/messages">Intro</a></li>
+                          <li><a href="/messages#list_mailboxes">List all mailboxes</a></li>
+                          <li><a href="/messages#list_messages">List all messages</a></li>
+                          <li><a href="/messages#show">Return an email message</a></li>
+                          <li><a href="/messages#search">Search for terms in the emails</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+		  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse5">
+                        Contacts
+                      </a>
+                    </div>
+                    <div id="collapse5" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/contacts">Intro</a></li>
+                          <li><a href="/contacts#list_contacts">List all contacts of an account</a></li>
+                          <li><a href="/contacts#show">Return a contact</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+		  <div class="accordion-group nav-accordion-group">
+                    <div class="accordion-heading nav-accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#nav-accordion" href="#collapse6">
+                        Messages
+                      </a>
+                    </div>
+                    <div id="collapse6" class="accordion-body collapse">
+                      <div class="accordion-inner nav-accordion-inner">
+                        <ul>
+                          <li><a href="/attachments">Intro</a></li>
+                          <li><a href="/attachments#list_attachments">List all attachments</a></li>
+                          <li><a href="/attachments#show">Return an attachment</a></li>
+                          <li><a href="/attachments#search">Search for attachments</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- /accordian-->
+              </div>
+            </div>
+            <div class="span9">
+	      <div class="c-panel">
+		<h2>Attachments API</h2>
+
+<p>Attachments API allows you to search and download attachments.</p>
+
+<h2><a id="list_attachments"></a> List Attachments</h2>
+
+<p>List the attachments for the accounts.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">GET /v1/accounts/:account_id/attachments
+</code></pre></div>
+<h3>Parameters</h3>
+
+<h4>page</h4>
+
+<p>As the number of attachments can be big, we use pagination for the API. The page parameter denotes the page number. If this is omitted, it will default to the first page. The numbering will start from 1.</p>
+
+<p>default: 1</p>
+
+<h4>per_page</h4>
+
+<p>You may specify the number of attachments to return in a page. The number is capped at 40 attachments.</p>
+
+<p>range: 1 - 40
+default: 20</p>
+
+<h4>sort</h4>
+
+<ul>
+<li>date</li>
+<li>filename</li>
+<li>sender</li>
+</ul>
+
+<p>default: date</p>
+
+<h5>direction</h5>
+
+<ul>
+<li>asc</li>
+<li>desc</li>
+</ul>
+
+<p>default: asc</p>
+
+<h3>Scope</h3>
+
+<p>attachment</p>
+
+<h3>Response</h3>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="p">{</span>
+    <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;start&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;attachments&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">15915</span><span class="p">,</span>
+            <span class="s2">&quot;account_id&quot;</span><span class="o">:</span> <span class="mi">100267</span><span class="p">,</span>
+            <span class="s2">&quot;message_id&quot;</span><span class="o">:</span> <span class="mi">86652</span><span class="p">,</span>
+            <span class="s2">&quot;sender&quot;</span><span class="o">:</span> <span class="s2">&quot;\&quot;sue\&quot; &lt;sue@hotmail.sg&gt;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;OfficeTrack Admin and Web User Guide.pdf&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;mime_type&quot;</span><span class="o">:</span> <span class="s2">&quot;application/pdf&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;meta_data&quot;</span><span class="o">:</span> <span class="s2">&quot;PDF document, version 1.5&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-06-25T19:17:24.000Z&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;size&quot;</span><span class="o">:</span> <span class="mi">2274960</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">15916</span><span class="p">,</span>
+            <span class="s2">&quot;account_id&quot;</span><span class="o">:</span> <span class="mi">100267</span><span class="p">,</span>
+            <span class="s2">&quot;message_id&quot;</span><span class="o">:</span> <span class="mi">86661</span><span class="p">,</span>
+            <span class="s2">&quot;sender&quot;</span><span class="o">:</span> <span class="s2">&quot;\&quot;mat\&quot; &lt;s@hotmail.sg&gt;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;Android.png&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;mime_type&quot;</span><span class="o">:</span> <span class="s2">&quot;image/png&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;meta_data&quot;</span><span class="o">:</span> <span class="s2">&quot;Format: PNG, Geometry: 228x363, Depth: 8 bits-per-pixel, Colors: 11155&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-06-25T18:04:07.000Z&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;size&quot;</span><span class="o">:</span> <span class="mi">52726</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">18746</span><span class="p">,</span>
+            <span class="s2">&quot;account_id&quot;</span><span class="o">:</span> <span class="mi">100267</span><span class="p">,</span>
+            <span class="s2">&quot;message_id&quot;</span><span class="o">:</span> <span class="mi">109414</span><span class="p">,</span>
+            <span class="s2">&quot;sender&quot;</span><span class="o">:</span> <span class="s2">&quot;\&quot;FastMail.FM Administrator\&quot; &lt;webmaster@fastmail.fm&gt;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;This_is_how_attachments_appear.txt&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;mime_type&quot;</span><span class="o">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;meta_data&quot;</span><span class="o">:</span> <span class="s2">&quot;ASCII text, with CRLF line terminators&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-07-21T17:59:48.000Z&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;size&quot;</span><span class="o">:</span> <span class="mi">247</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2><a id"show"></a> Get a single attachment</h2>
+
+<p>Get an attachment from the account. It will return the attachment encoded in <a href="http://en.wikipedia.org/wiki/Base64%E2%80%8E">Base 64</a>.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">GET /v1/accounts/:account_id/attachments/:id
+</code></pre></div>
+<h3>Scope</h3>
+
+<p>attachment</p>
+
+<h3>Response</h3>
+
+<p>Base 64 encoded file.</p>
+
+<h2><a id="search_attachments"></a> Search for attachments</h2>
+
+<p>Search for attachments with search terms.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">GET /v1/accounts/:account_id/attachments_search
+</code></pre></div>
+<h3>Parameters</h3>
+
+<h4>query</h4>
+
+<p>Enter the terms for searching the attachments. It will return the meta data of attachments that satisfy the search terms.</p>
+
+<p>default: empty string</p>
+
+<h4>page</h4>
+
+<p>As the number of attachments can be big, we use pagination by default for the messages API. The page parameter denotes the page number. If this is omiitted, it will default to the first page. The numbering will start from 1.</p>
+
+<p>default: 1</p>
+
+<h4>per_page</h4>
+
+<p>You may specify the number of attachments to return in a page. The number is capped at 40 attachments.</p>
+
+<p>range: 1 - 40
+default: 20</p>
+
+<h3>Scope</h3>
+
+<p>attachment</p>
+
+<h3>Response</h3>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="p">{</span>
+    <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;start&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;attachments&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">110212</span><span class="p">,</span>
+            <span class="s2">&quot;account_id&quot;</span><span class="o">:</span> <span class="mi">675</span><span class="p">,</span>
+        <span class="s2">&quot;message_id&quot;</span><span class="o">:</span> <span class="mi">812</span><span class="p">,</span>
+        <span class="s2">&quot;sender&quot;</span><span class="o">:</span> <span class="s2">&quot;\&quot;at\&quot; &lt;f@hotmail.sg&gt;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;OfficeTrack Admin and Web User Guide.pdf&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;mime_type&quot;</span><span class="o">:</span> <span class="s2">&quot;application/pdf&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;meta_data&quot;</span><span class="o">:</span> <span class="s2">&quot;PDF document, version 1.5&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;date&quot;</span><span class="o">:</span> <span class="s2">&quot;2013-06-25T19:17:24.000Z&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;size&quot;</span><span class="o">:</span> <span class="mi">2274960</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+	      </div>
+            </div>
+          </div>
+	</div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+    	<div class="container-general">
+          <ul class="footer-menu clearfix">
+            <li><a href="http://www.dropmyemail.com/about_us">About</a></li>
+            <li><a href="mailto:support@dropmyemail.com">Support</a></li>
+            <li><a href="http://engineering.dropmyemail.com">Blog</a></li>
+          </ul>
+          <hr>
+          <div class="footer-copyright">Copyright 2013-2014 Dropmysite Pte Ltd.  All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
